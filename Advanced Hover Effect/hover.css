@@ -1,0 +1,178 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+button{
+    margin: 1rem;
+}
+
+.btn{
+    background-color: var(--background-color);
+    color: #222;
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+
+    --background-color: #e3e3e3;
+    --accent-color: #0AF;
+    --border-size: 2px;
+}
+
+.btn-border-pop::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border: var(--border-size) solid var(--background-color);
+    transition: top, left, right, bottom, 100ms ease-in-out;
+    -webkit-transition: top, left, right, bottom, 100ms ease-in-out;
+    -moz-transition: top, left, right, bottom, 100ms ease-in-out;
+    -ms-transition: top, left, right, bottom, 100ms ease-in-out;
+    -o-transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.btn-border-pop:hover::before,
+.btn-border-pop:focus::before{
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}
+
+.btn-background-slide::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.btn-background-slide:hover::before,
+.btn-background-slide:focus::before{
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+
+.btn-background-slide{
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -ms-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+}
+
+.btn-background-slide:hover,
+.btn-background-slide:focus{
+    color: white;
+}
+
+
+
+
+.btn-background-circle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    transform: scale(1.5);
+    background-color: var(--background-color);
+    z-index: -1;
+    transition: transform 500ms ease-in-out;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -webkit-transition: transform 500ms ease-in-out;
+    -moz-transition: transform 500ms ease-in-out;
+    -ms-transition: transform 500ms ease-in-out;
+    -o-transition: transform 500ms ease-in-out;
+}
+
+.btn-background-circle:hover::before,
+.btn-background-circle:focus::before{
+    transform: scale(0);
+
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+
+.btn-background-circle{
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--accent-color);
+    transition: color 500ms ease-in-out;
+
+    -webkit-transition: color 500ms ease-in-out;
+    -moz-transition: color 500ms ease-in-out;
+    -ms-transition: color 500ms ease-in-out;
+    -o-transition: color 500ms ease-in-out;
+}
+
+.btn-background-circle:hover,
+.btn-background-circle:focus{
+    color: white;
+}
+
+
+
+.btn-border-underline::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: var(--border-size);
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+    
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    -webkit-transition: transform 300ms ease-in-out;
+    -moz-transition: transform 300ms ease-in-out;
+    -ms-transition: transform 300ms ease-in-out;
+    -o-transition: transform 300ms ease-in-out;
+}
+
+.btn-border-underline:hover::before,
+.btn-border-underline:focus::before{
+    transform: scaleX(1);
+
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
