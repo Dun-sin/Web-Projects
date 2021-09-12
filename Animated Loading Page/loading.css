@@ -1,0 +1,123 @@
+:root{
+    --time: 300ms;
+    --text-time: calc(var(--time) + 300ms);
+}
+
+body{
+    font-family: 'Poppins', sans-serif, Times;
+    font-size: 16px;
+    background-color: rgba(14, 13, 13, 0.2);
+}
+
+.container{
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ball-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.ball{
+    background-color: black;
+    margin: 2px;
+    height: 20px;
+    width:  20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.ball-1{
+    animation: ball-bounce var(--time) cubic-bezier(0.76,-0.43, 1,-0.06) infinite;
+    animation-fill-mode: forwards;
+    -webkit-animation: ball-bounce var(--time) cubic-bezier(0.76,-0.43, 1,-0.06) infinite;
+}
+.ball-2{
+    animation: ball-bounce var(--time) cubic-bezier(0.03, 1.24, 0.77,-0.15) infinite;
+    animation-fill-mode: forwards;
+    -webkit-animation: ball-bounce var(--time) cubic-bezier(0.03, 1.24, 0.77,-0.15) infinite;
+}
+.ball-3{
+    animation: ball-bounce var(--time) cubic-bezier(0.76,-0.43, 1,-0.06) infinite reverse forwards;
+    -webkit-animation: ball-bounce var(--time) cubic-bezier(0.76,-0.43, 1,-0.06) infinite reverse forwards;
+}
+
+.text{
+    margin-left: 1%;
+    margin-top: 2%;
+    font-weight: 700;
+    animation: text-animation var(--text-time) ease-in-out infinite;
+    animation-fill-mode: forwards;
+    -webkit-animation: text-animation var(--text-time) ease-in-out infinite;
+}
+
+@keyframes ball-bounce {
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    25%{
+        opacity: 0.8;
+        transform: translateY(-8px);
+        -webkit-transform: translateY(-8px);
+        -moz-transform: translateY(-8px);
+        -ms-transform: translateY(-8px);
+        -o-transform: translateY(-8px);
+    }
+
+    50%{
+        opacity: 0.6;
+        transform: translateY(-4px);
+        -webkit-transform: translateY(-4px);
+        -moz-transform: translateY(-4px);
+        -ms-transform: translateY(-4px);
+        -o-transform: translateY(-4px);
+    }
+
+    75%{
+        opacity: 0.4;
+        transform: translateY(-2px);
+        -webkit-transform: translateY(-2px);
+        -moz-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+        -o-transform: translateY(-2px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+@keyframes text-animation{
+    0%, 100%{
+        opacity: 1;
+    }
+
+    25%, 75%{
+        opacity: 0.6;
+    }
+
+    50%{
+        opacity: 0.4;
+    }
+}

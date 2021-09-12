@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    color: #1d2736;
+    width: auto;
+    height: 100vh;
+    background: linear-gradient(to top left,
+    #4af7d1,
+    #21ebe1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms{
+    height: 60%;
+    width: 25%;
+    background: linear-gradient(to bottom right,     rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.form{
+    padding-top: 5%;
+    padding-left: 10%;
+    font-size: 1.2rem;
+}
+
+.form input{
+    border: none;
+    width: 90%;
+}
+
+.terms{
+    padding-top: 5%;
+    padding-left: 10%;
+    font-size: 0.9rem;
+}
+
+a{
+    color: crimson;
+    text-decoration: underline;
+}
+
+#terms input{
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+button{
+    font-size: 0.9rem;
+    padding: 10px;
+    margin-top: 4%;
+    margin-left: 40%;
+    background-color: #1d2736;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.already{
+    display: block;
+    padding-left: 10%;
+}
+
+@media (width: 280px) {
+    h2{
+        font: 1em;
+    }
+    .terms, .already{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 350px) {
+    .forms{
+        height: 100%;
+        width: 100%;
+    }
+
+    h2{
+        padding-top: 1%;
+    }
+
+    .form{
+        padding-top: 1%;
+    }
+}
+@media (max-width: 400px) {
+    .forms{
+        height: 60%;
+        width: 80%;
+    }
+
+    button{
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 600px) {
+    .forms{
+        height: 60%;
+        width: 70%;
+    }
+    h2{
+        padding-top: 1%;
+    }
+
+    .form{
+        padding-top: 1%;
+    }
+}
+
+@media (max-width: 1230px) {
+    .forms{
+        height: 60%;
+        width: 50%;
+    }
+}
