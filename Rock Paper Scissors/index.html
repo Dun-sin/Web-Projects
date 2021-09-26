@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+        <title>Rock Paper Scissors</title>
+    </head>
+<body>
+    <div class="darkBackground" id="background">
+    </div>
+    <div class="aboutGame" id="modal">
+        <div class="aboutHeader">
+            <h2>Rock Paper Scissors</h2>
+            <button id="closeModal">&times;</button>
+        </div>
+        <div class="rules">
+            <h3>Rules</h3>
+            <p>- Paper(✋) beats Rock(✊)</p>
+            <p>- Rock(✊) beats Scissors(✌)</p>
+            <p>-  Scissors(✌) beats Paper(✋)</p>
+        </div>
+    </div>
+    <header>
+        <h1>Welcome to ROCK PAPER SCISSORS</h1>
+        <button id='rules'>Rules</button>
+    </header>
+    <main>
+        <div class="game-section">
+            <h2>Make a choice</h2>
+            <button class="btn" data-rock>✊</button>
+            <button class="btn" data-paper>✋</button>
+            <button class="btn" data-scissors>✌</button>
+        </div>
+        <aside>
+            <h2>Score</h2>
+            <div class="score-section">
+                <div class="userScore">
+                    User:
+                    <span data-user-score>0</span>
+                </div>
+                <div class="computerScore">
+                    Computer:
+                    <span data-computer-score>0</span>
+                </div>
+            </div>
+            <h2>Events</h2>
+            <div>
+                <p id="happen"></p>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
