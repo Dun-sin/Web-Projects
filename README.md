@@ -1,3 +1,3 @@
 # Web-Projects
 
-Projects done during my learning of web development
+Projects done during my learning of Frontend development
